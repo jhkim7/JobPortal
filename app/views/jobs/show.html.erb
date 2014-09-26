@@ -1,0 +1,15 @@
+<p>
+	<strong>Title:</strong>
+	<%= @job.title %>
+</p>
+<p>
+	<strong>Description:</strong>
+	<%= @job.description %>
+</p>
+<p>
+	<strong>Tags:</strong>
+	<%= @job.tag %>
+</p>
+
+<%= link_to 'Back', jobs_path%>
+| <%= link_to 'Edit', edit_job_path(@job) %>
