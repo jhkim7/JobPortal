@@ -1,7 +1,7 @@
 class AdminsController < ApplicationController
   
-  http_basic_authenticate_with name: "admin", password: "admin", except: [:index, :show]
-  
+  # http_basic_authenticate_with name: "admin", password: "admin", except: [:index, :show]
+
   def new
     @admin = Admin.new
   end
@@ -10,7 +10,7 @@ class AdminsController < ApplicationController
     @admin = Admin.new(admin_params)
     
     if @admin.save
-    redirect_to @admin
+      redirect_to @admin
     else
       render 'new'
     end
