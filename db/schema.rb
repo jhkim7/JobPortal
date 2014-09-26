@@ -39,4 +39,21 @@ ActiveRecord::Schema.define(version: 20140924221445) do
     t.datetime "updated_at"
   end
 
+  create_table "job_applications", force: true do |t|
+    t.string "job"
+    t.string "job_seeker"
+    t.string "cover_letter"
+    t.date "application_date"
+    t.string "status"
+  end
+
+  create_table "job_seekers", force: true do |t|
+    t.string "name"
+    t.string "email"
+    t.string "password"
+    t.integer "phone_number"
+    t.string "skills"
+    t.string "resume"
+  end
+
 end
