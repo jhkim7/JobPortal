@@ -114,6 +114,7 @@ PLATFORMS
 DEPENDENCIES
   bcrypt
   coffee-rails (~> 4.0.0)
+  execjs
   jbuilder (~> 2.0)
   jquery-rails
   pg
