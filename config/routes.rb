@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'sessions/login'
+
+  get 'sessions/profile'
+
+  get 'sessions/setting'
+
+  get 'sessions/home'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
