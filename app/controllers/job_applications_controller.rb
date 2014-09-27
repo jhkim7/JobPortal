@@ -1,4 +1,4 @@
-class JobApplicationController < ApplicationController
+class JobApplicationsController < ApplicationController
 
   def new
     @job_application = JobApplication.new
@@ -23,7 +23,7 @@ class JobApplicationController < ApplicationController
   end
 
   def index
-    @job_applications = JobApplications.all
+    @job_applications = JobApplication.all
   end
 
   def edit

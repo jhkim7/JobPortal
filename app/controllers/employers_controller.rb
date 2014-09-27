@@ -1,5 +1,4 @@
 class EmployersController < ApplicationController
-
   def new
     @employer = Employer.new
   end
@@ -46,4 +45,5 @@ class EmployersController < ApplicationController
 
     redirect_to employer_path
   end
+
 end

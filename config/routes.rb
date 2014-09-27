@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
   get 'sessions/login'
+
   get 'sessions/profile'
+
   get 'sessions/setting'
+
   get 'sessions/home'
+
   get 'welcome/index'
+
   get 'sessions/logout'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -13,6 +18,7 @@ Rails.application.routes.draw do
   resources :sessions
   resources :jobs
   resources :employers
+  resources :job_seekers
 
   # You can have the root of your site routed with "root"
   root 'sessions#login'

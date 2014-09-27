@@ -1,5 +1,4 @@
-class JobSeekerController < ApplicationController
-
+class JobSeekersController < ApplicationController
   def new
     @job_seeker=JobSeeker.new
   end
@@ -34,7 +33,7 @@ class JobSeekerController < ApplicationController
   def update
     @job_seeker = JobSeeker.find(params[:id])
 
-    if @job_seeker.update(admin_params)
+    if @job_seeker.update(job_seeker_params)
       redirect_to @job_seeker
     else
       render 'edit'
@@ -45,6 +44,6 @@ class JobSeekerController < ApplicationController
     @job_seeker = JobSeeker.find(params[:id])
     @job_seeker.destroy
 
-    redirect_to JobSeekers_path
+    redirect_to job_seeker_path
   end
 end

@@ -1,0 +1,25 @@
+
+	<% @page_title = "Job Seeker | Signup" %>
+<div class="sign-form">
+	<h1>New Job Seeker Sign Up</h1>
+  
+  <%= form_for(:job_seeker, :url => {:controller => 'job_seekers', :action => 'create'}) do |f| %>
+    <p> Username:</br> <%= f.text_field :name%> </p>
+    <p> Email:</br> <%= f.text_field :email%> </p>
+    <p> Password:</br> <%= f.password_field :password%></p>
+    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+    <p> Phone Number:</br> <%= f.text_field :phone_number%> </p>
+    <p> Skills:</br> <%= f.text_area :skills%> </p>
+    <p> Resume:</br> <%= f.text_area :resume%> </p>
+    <%= f.submit :Signup %>
+  <% end %>
+  <% if @job_seeker.errors.any? %>
+    <ul class="Signup_Errors">
+    <% for message_error in @job_seeker.errors.full_messages %>
+      <li>* <%= message_error %></li>
+    <% end %>
+    </ul>
+  <% end %>
+  	
+<%= link_to 'Back', sessions_login_path %>
+</div>

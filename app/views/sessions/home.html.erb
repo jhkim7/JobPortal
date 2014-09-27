@@ -13,8 +13,6 @@
   </ul>
 </div>
 
-
-
 <div>Job listing</div>
 <button><%= link_to 'Job Listing', controller: 'jobs' %></button>
 <button><%= link_to 'New Job', new_job_path %></button>
@@ -23,11 +21,10 @@
 <button><%= link_to 'Admin Listing', controller: 'admins' %></button>
 <button><%= link_to 'New Admin', new_admin_path %></button>
 
-<script>
-
-    $('a').click(function(){
+<%= javascript_tag do %>
+    $('#menu-main a').click(function(){
         $('.current').removeClass('current');
         $(this).closest('li').addClass('current');
         return false;
     });
-</script>
+<% end %>

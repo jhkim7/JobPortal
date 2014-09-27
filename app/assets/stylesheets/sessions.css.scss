@@ -5,21 +5,19 @@
   margin: -8px -8px 0 -8px;
   height: 70px;
   font-family: sans-serif;
-  background: #324B5F;
 }
 .logo {
   float: left;
   line-height: 70px;
   font-size: 28px;
   margin-left: 20px;
-  color: white;
 }
 .user-info {
   float:right;
   line-height: 70px;
   margin-right:20px;
   font-size: 14px;
-  color: #bbb;
+  color: #EA5F66;
   a {
     text-decoration: none;
     color:inherit;
@@ -34,38 +32,23 @@
 }
 .tabs-menu ul{
   margin: 0 -8px 0 -8px;
-  background: #eee;
+  background: #474444;
 }
 .tabs-menu li{
   display:inline-block;
   position:relative;
-  background-color:#eee;
-  width: 19%;
+  background-color:#474444;
+  width: 18%;
 }
 .tabs-menu a{
-  color:#999;
-  text-shadow:0 1px 0 #fff;
+  color:#aaa;
   display:inline-block;
   padding:0.5em 1em;
   text-decoration:none;;
 }
 li.current{
-  border-bottom:1px solid #FFF;
-  background-color:#fff;
-}
-li.current:after{
-  background-color:#fff;
-  border-bottom:1px solid #FFF;
-}
-li.current:before{
-  content:" ";
-  border-bottom:1px solid #FFF;
-  position:absolute;
-  width:1em;
-  height:100%;
-  z-index:2;
-  background-color:#fff;
+  background-color:#EA5F66;
 }
 li.current a{
-  color:#6FABE7;
+  color:#fff;
 }
