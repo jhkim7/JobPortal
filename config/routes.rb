@@ -1,17 +1,11 @@
 Rails.application.routes.draw do
 
   get 'sessions/login'
-
   get 'sessions/profile'
-
   get 'sessions/setting'
-
   get 'sessions/home'
-
   get 'welcome/index'
-
   get 'sessions/logout'
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -25,6 +19,7 @@ Rails.application.routes.draw do
 
   get 'login' => 'sessions#login'
   post 'login' => 'sessions#login'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
