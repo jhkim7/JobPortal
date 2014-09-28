@@ -47,7 +47,7 @@ class AdminsController < ApplicationController
     @admin = Admin.find(params[:id])
     @admin.destroy
     
-    redirect_to Admins_path
+    redirect_to admins_path
   end
 
 end
