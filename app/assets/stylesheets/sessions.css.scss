@@ -2,7 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .billboard {
-  margin: -8px -8px 0px -8px;
+  margin: -8px -8px 0 -8px;
   height: 70px;
   font-family: sans-serif;
+}
+.logo {
+  float: left;
+  line-height: 70px;
+  font-size: 28px;
+  margin-left: 20px;
+}
+.user-info {
+  float:right;
+  line-height: 70px;
+  margin-right:20px;
+  font-size: 14px;
+  color: #EA5F66;
+  a {
+    text-decoration: none;
+    color:inherit;
+  }
+}
+
+#menu-main {
+  padding: 0px;
+}
+.tabs-menu {
+  text-align: center;
+}
+.tabs-menu ul{
+  margin: 0 -8px 0 -8px;
+  background: #474444;
+}
+.tabs-menu li{
+  display:inline-block;
+  position:relative;
+  background-color:#474444;
+  width: 18%;
+}
+.tabs-menu a{
+  color:#aaa;
+  display:inline-block;
+  padding:0.5em 1em;
+  text-decoration:none;;
+}
+li.current{
+  background-color:#EA5F66;
+}
+li.current a{
+  color:#fff;
 }

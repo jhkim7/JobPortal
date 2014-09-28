@@ -4,7 +4,7 @@ class CreateEmployers < ActiveRecord::Migration
       t.string :company
       t.string :name
       t.string :email
-      t.string :password
+      t.string :encrypted_password
 
       t.timestamps
     end

@@ -1,14 +1,30 @@
 <div class="billboard">
-  <div>DireWolf</div>
-  <div>WELOME <%=@current_user.name%> | <%=  %></div>
+  <div class="logo">DireWolf</div>
+  <div class="user-info"><%= link_to @current_user.name, sessions_profile_path%> | <%= link_to 'Logout', sessions_logout_path %></div>
 </div>
 
+<div class="tabs-menu">
+  <ul id="menu-main">
+    <li><a href="">Home</a></li>
+    <li class="current"><a href="">Jobs Listings</a></li>
+    <li><a href="">Profile</a></li>
+    <li><a href="">About</a></li>
+    <li><a href="">Contact</a></li>
+  </ul>
+</div>
 
-
-<h1>JK Job Portal</h1>
+<div>Job listing</div>
 <button><%= link_to 'Job Listing', controller: 'jobs' %></button>
 <button><%= link_to 'New Job', new_job_path %></button>
 
-<h2>Admins</h2>
+<div>Admins</div>
 <button><%= link_to 'Admin Listing', controller: 'admins' %></button>
 <button><%= link_to 'New Admin', new_admin_path %></button>
+
+<%= javascript_tag do %>
+    $('#menu-main a').click(function(){
+        $('.current').removeClass('current');
+        $(this).closest('li').addClass('current');
+        return false;
+    });
+<% end %>

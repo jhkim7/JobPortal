@@ -1,6 +1,5 @@
 class AdminsController < ApplicationController
-  
-  # http_basic_authenticate_with name: "admin", password: "admin", except: [:index, :show]
+
   before_filter :save_login_state, :only => [:new, :create]
 
 

@@ -1,0 +1,30 @@
+<h1>Listing Job Seekers</h1>
+ 
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Phone Number</th>
+    <th>Skills</th>
+    <th>Resume</th>
+
+  </tr>
+ 
+  <% @job_seeker.each do |job_seeker| %>
+    <tr>
+      <td><%= job_seeker.name %></td>
+      <td><%= job_seeker.email %></td>
+      <td><%= job_seeker.password %></td>
+      <td><%= job_seeker.phone_number %></td>
+      <td><%= job_seeker.skills %></td>
+      <td><%= job_seeker.resume %></td>
+      <td><%= link_to 'Show', job_seekers_path(job_seeker) %></td>
+      <!-- <td><%= link_to 'Edit', edit_job_seeker_path(job_seeker) %></td>
+      <td><%= link_to 'Delete', job_seekers_path(job_seeker),
+                    method: :delete, data: { confirm: 'Are you sure?' } %></td>
+     -->
+     </tr>
+  <% end %>
+</table>
+<%= link_to 'Back', root_path%>
