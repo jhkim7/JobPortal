@@ -44,3 +44,7 @@ gem "bcrypt", :require => "bcrypt"
 
 gem 'execjs'
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
