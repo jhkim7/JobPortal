@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 # Use postgresql as database, Heroku wants it
 #gem 'pg'
 # Use SCSS for stylesheets
@@ -43,6 +43,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem "bcrypt", :require => "bcrypt"
 
 gem 'execjs'
+
+group :development, :test do
+  gem 'sqlite3'
+end
+
 
 group :production do
   gem 'pg'
